@@ -14,7 +14,7 @@ class posts extends Controller
         $this->posts = get_all("SELECT * FROM  post");
         $this->users = get_all("SELECT * FROM users");
         $post_id = $this->params[0];
-        $this->post = get_first("SELECT * FROM post NATURAL  JOIN  user WHERE post_id ='$post_id'");
+        $this->post = get_first("SELECT * FROM post NATURAL  JOIN  users WHERE post_id ='$post_id'");
     }
 
     /**
